@@ -1,5 +1,16 @@
+import { Typography } from 'antd'
+import { CheckCircleOutlined } from '@ant-design/icons'
+
+import 'antd/dist/antd.css'
+
+const { Title } = Typography
+
 function App() {
-  return <h1>React Go Blog</h1>
+  return (
+    <Title>
+      <CheckCircleOutlined /> React Go Blog
+    </Title>
+  )
 }
 
 export default App
