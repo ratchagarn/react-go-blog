@@ -1,15 +1,16 @@
-import { Typography } from 'antd'
-import { CheckCircleOutlined } from '@ant-design/icons'
+import { QueryCache, ReactQueryCacheProvider } from 'react-query'
 
-import 'antd/dist/antd.css'
+import './tailwind.css'
 
-const { Title } = Typography
+import Example from './components/Example'
+
+const queryCache = new QueryCache()
 
 function App() {
   return (
-    <Title>
-      <CheckCircleOutlined /> React Go Blog
-    </Title>
+    <ReactQueryCacheProvider queryCache={queryCache}>
+      <Example />
+    </ReactQueryCacheProvider>
   )
 }
 
